@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Doctor form</title>
+    <style>
+    body{
+      color: #555;
+    }
+    h1 {
+
+      font-family: 'Lato', 'Arial', sans-serif;
+      text-align: center;
+      margin-bottom: 20px;
+      margin-left: 35%;
+      margin-right: 35%;
+      padding-bottom: 5px;
+      font-weight: 300;
+      border-bottom: 2px solid Tomato;
+      }
+
+
+    form{
+      padding:8px;
+      margin-left: 20%;
+      margin-right: 20%;
+      font-family: Calibri;
+      font-size: 11pt;
+      font-style: normal;
+      font-weight: bold;
+      text-align:;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      border-collapse: collapse;
+    }
+    .button {
+    background-color: Tomato; /* Green */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    color: White;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 20px;
+    }
+    input[type=text],input[type=number], input[type=tel],input[type=date],input[type=radio], select {
+    padding: 8px 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Doctor Information Form</h1>
+	<form action="update.php" method="post">
+	 <table cellpadding=10>
+        <tr>
+          <td>Doctor Id You want to update</td>
+          <td> <input type="number" name="did" value="" required> </td>
+        </tr>
+		<tr>
+          <td>First Name</td>
+          <td><input type="text" name="fname" maxlength="30" value="" required></td>
+        </tr>
+        <tr>
+          <td>Last Name</td>
+          <td><input type="text" name="lname" maxlength="30" value="" required></td>
+        </tr>
+        <tr>
+          <td>Department Id</td>
+          <td> <input type="number" name="deptid" value="" required> </td>
+        </tr>
+		<tr>
+          <td>Phone Number</td>
+          <td> <input type="tel" name="phno" value="" required> </td>
+        </tr>
+		<tr>
+
+		  <td>Specialization</td>
+		  <td> <select name="formspec" required>
+					<option value="">Select one</option>
+					<option value="Cardiologist">Cardiologist</option>
+					<option value="Ophthamologist">Ophthamologist</option>
+					<option value="Dentist">Dentist</option>
+					<option value="Dermatologist">Dermatologist</option>
+					<option value="Pediatrician">Pediatrician</option>
+					<option value="Anesthesiologist">Anesthesiologist</option>
+					<option value="Radiotherapist">Radiotherapist</option>
+					<option value="Gynaecologist">Gynaecologist</option>
+					<option value="Pscychologist">Pscychologist</option>
+					<option value="Surgery">Surgery</option>
+					<option value="Obstetrician">Obstetrician</option>
+					<option value="Physiotherapist">Physiotherapist</option>
+				</select>
+		</tr>
+	 <tr>
+          <td colspan="2">
+            <input class="button" type="submit" value="Submit">
+            <input class="button" type="reset"  value="Reset">
+          </td>
+        </tr>
+
+		</table>
+    </form>
+  </body>
+</html>

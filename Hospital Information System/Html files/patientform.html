@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Patient form</title>
+     <style>
+    body{
+      color: #555;
+    }
+    h1 {
+
+      font-family: 'Lato', 'Arial', sans-serif;
+      text-align: center;
+      margin-bottom: 20px;
+      margin-left: 35%;
+      margin-right: 35%;
+      padding-bottom: 5px;
+      font-weight: 300;
+      border-bottom: 2px solid Tomato;
+      }
+
+
+    form{
+      padding:8px;
+      margin-left: 20%;
+      margin-right: 20%;
+      font-family: Calibri;
+      font-size: 11pt;
+      font-style: normal;
+      font-weight: bold;
+      text-align:;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      border-collapse: collapse;
+    }
+    .button {
+    background-color: Tomato; 
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    color: White;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 20px;
+    }
+    input[type=text],input[type=number], input[type=tel],input[type=date],input[type=radio], select {
+    padding: 8px 12px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Patient Information Form</h1>
+    <form action="pinfo.php" method="post">
+      <table cellpadding=10>
+	<tr>
+          <td>Patient ID</td>
+          <td> <input type="number" name="pid" value="" required> </td>
+        </tr>
+        <tr>
+          <td>First Name</td>
+          <td><input type="text" name="fname" maxlength="30" value="" required></td>
+        </tr>
+        <tr>
+          <td>Last Name</td>
+          <td><input type="text" name="lname" maxlength="30" value="" required></td>
+        </tr>
+        <tr>
+          <td>Sex</td>
+          <td><input type="radio" name="gender" value="M" checked> Male
+              <input type="radio" name="gender" value="F"> Female
+          </td>
+        </tr>
+        <tr>
+          <td>Date of Birth</td>
+          <td><input type="date" name="bday" required></td>
+        </tr>
+        <tr>
+          <td>Disease</td>
+          <td><input type="text" name="disease" value="" maxlength="50" required></td>
+        </tr>
+	<tr>
+          <td>Consulted doctor ID</td>
+          <td><input type="number" name="did" value="" required></td>
+        </tr>
+	<tr>
+          <td>Medicines Prescribed</td>
+          <td><input type="text" name="med1" placeholder="medicine 1" value="" maxlength="50" required></td>
+          <td><input type="text" name="med2" placeholder="medicine 2" value="" maxlength="50"></td>
+        </tr>
+        <tr>
+          <td>Phone Number</td>
+          <td> <input type="tel" name="phno" value="" required> </td>
+        </tr>
+        <tr>
+          <td>Patient Type</td>
+          <td> <input type="radio" name="ptype" value="in" checked> In
+          <input type="radio" name="ptype" value="out"> Out
+          <input type="radio" name="ptype" value="ref"> referred </td>
+        </tr>
+      </table>
+      <br>
+      <fieldset>
+        <legend>For inpatients</legend>
+        <table cellpadding=10>
+          <tr>
+            <td>Date of arrival</td>
+            <td> <input type="date" name="doa"> </td>
+          </tr>
+          <tr>
+            <td>Date of release</td>
+            <td> <input type="date" name="dor"> </td>
+          </tr>
+          <tr>
+            <td>Ward Number</td>
+            <td> <input type="number" name="wno" value="" min="1" max="5"> </td>
+          </tr>
+          <tr>
+            <td>Ward Type</td>
+            <td> <select name="wtype">
+                                        <option value="">Select one</option>
+                                        <option value="Common">Common</option>
+                                        <option value="Emergency">Emergency</option>
+                                        <option value="ICU">ICU</option>
+					 <option value="Maternity">Maternity</option>
+			</select> </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>For outpatients</legend>
+        <table cellpadding=10>
+          <tr>
+            <td>Date of arrival</td>
+            <td> <input type="date" name="cdate"> </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+      <fieldset>
+        <legend>For referred patients</legend>
+        <table cellpadding=10>
+          <tr>
+            <td>Referred hospital/expert name</td>
+            <td> <input type="text" name="hname" value="" maxlength="100"> </td>
+          </tr>
+          <tr>
+            <td>Referred date</td>
+            <td> <input type="date" name="rdate"> </td>
+          </tr>
+        </table>
+      </fieldset>
+      <br>
+      <table cellpadding=10>
+        <tr>
+          <td colspan="2">
+            <input class="button" type="submit" value="Submit">
+            <input class="button" type="reset"  value="Reset">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
+
